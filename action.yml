@@ -1,0 +1,6 @@
+name: "AI PR Reviewer"
+description: "Generates a concise summary & suggestions for a Pull Request using GPT‑4"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  
