@@ -1,0 +1,12 @@
+name: self-test
+
+on:
+  push:
+
+jobs:
+  run-me:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run my local action
+        uses: ./
