@@ -44,3 +44,33 @@ def main():
         return
 
     with open(event_path, 'r') as f:
+        event_data = json.load(f)
+
+    pr_data = event_data.get("pull_request")
+    if not pr_data:
+        print("No 'pull_request' data found in the event payload.")
+        return
+
+    title = pr_data.get("title", "N/A")
+    diff_url = pr_data.get("diff_url", "N/A")
+
+    print(f"📥 Fetching diff... {diff_url}")
+    diff_resp = requests.get(diff_url, headers={"Accept": "application/vnd.github.v3.diff"})
+    if diff_resp.status_code != 200:
+        print(f"❌ Failed to fetch diff: {diff_resp.status_code}")
+        return
+
+    diff_text = diff_resp.text
+    print(f"✅ Diff fetched ({len(diff_text.splitlines())} lines)")
+
+    print("🧠 Sending to OpenAI...")
+    ai_response = review_diff_with_openai(f"PR Title: {title}\n\n{diff_text}")
+
+    print("💬 AI Review Response:")
+    print(ai_response)
+
+    post_pr_comment(pr_data, ai_response)
+
+
+if __name__ == "__main__":
+    main()
