@@ -1,3 +1,9 @@
+**WIP: this project still has more features coming soon!**
+**Upcoming features:**
+- Improved feedback formatting
+- Pass/Fail recommendation and configuration options
+- Comments on PRs
+
 # AI PR Reviewer
 
 Generates concise summaries and suggestions for GitHub Pull Requests using GPT-4.
