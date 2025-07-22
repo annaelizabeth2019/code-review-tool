@@ -1,3 +1,10 @@
+**WIP: this project still has more features coming soon!**
+
+**Upcoming features:**
+- Improved feedback formatting
+- Pass/Fail recommendation and configuration options
+- Comments on PRs
+
 # AI PR Reviewer
 
 Generates concise summaries and suggestions for GitHub Pull Requests using GPT-4.
@@ -32,7 +39,7 @@ This project is designed to run as a GitHub Action using Docker. It fetches the 
    ```
 
 3. **Set up environment variables:**
-    - Create a `.env` file in the project root:
+   - Create a `.env` file in the project root:
      ```env
      OPENAI_API_KEY=your_openai_api_key_here
      GITHUB_EVENT_PATH=sample_event.json
