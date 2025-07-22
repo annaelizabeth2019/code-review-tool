@@ -32,12 +32,13 @@ This project is designed to run as a GitHub Action using Docker. It fetches the 
    ```
 
 3. **Set up environment variables:**
-   - Create a `.env` file in the project root:
+    - Create a `.env` file in the project root:
      ```env
      OPENAI_API_KEY=your_openai_api_key_here
      GITHUB_EVENT_PATH=sample_event.json
      ```
-   - Or export them directly in your shell.
+    - Update the sample_event.json diff link to test the response for different PR diffs. 
+    - Or export them directly in your shell.
 
 4. **Run the tool locally:**
    ```bash
