@@ -3,7 +3,7 @@
 **Upcoming features:**
 - Improved feedback formatting
 - Pass/Fail recommendation and configuration options
-- Comments on PRs
+- Comments on PRs (currently in feature branch)
 
 # AI PR Reviewer
 
