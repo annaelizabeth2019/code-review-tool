@@ -18,6 +18,9 @@ def review_diff_with_openai(diff: str) -> str:
         "**## ❌ Potential Issues**\n"
         "- Flag any bugs, security concerns, or major design problems.\n\n"
         "Use GitHub Markdown features like `###`, `-`, and ````` where appropriate.\n\n"
+        "## 🚨 Should Block PR?\n"
+        "Respond with 'yes' if the PR should be blocked due to a serious issue (like a bug, security risk, or crash). Otherwise say 'no'.\n\n"
+        f"Here is the PR diff:\n\n{diff}"
         f"Here is the PR diff:\n\n{diff}"
     )
 
