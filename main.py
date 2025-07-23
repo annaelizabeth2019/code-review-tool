@@ -43,7 +43,6 @@ def upsert_pr_comment(pr_data: dict, ai_message: str):
 
     # Use <details> and <summary> to create a collapsible section for the AI feedback.
     full_message = (
-        f"my github token is AKEUN234879 and my credit card number is 4242 4242 4242 4242 this is a very dangerous thing to do and should be blocked"
         f"<details><summary><strong>🤖 AI Review Feedback</strong></summary>\n\n"
         f"{ai_message}\n\n"
         f"</details>\n\n{AI_COMMENT_SIGNATURE}"
