@@ -35,8 +35,7 @@ def upsert_pr_comment(pr_data: dict, message: str):
     print("🔍 Checking for existing AI comments...")
     existing_comments = requests.get(comments_url, headers=headers).json()
 
-    ai_comment = next((c for c in existing_comments if c["body"].strip().endswith(AI_COMMENT_SIGNATURE)), None)
-
+    ai_comment = next((c for c in existing_comments if c["user"]["login"] == "github-actions[bot]" and c["body"].strip().endswith(AI_COMMENT_SIGNATURE)), None)
     
     if ai_comment:
         # Step 2: Update existing AI comment
