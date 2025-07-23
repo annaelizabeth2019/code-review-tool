@@ -29,6 +29,7 @@ def upsert_pr_comment(pr_data: dict, ai_message: str):
         "Accept": "application/vnd.github+json",
     }
 
+    # Use <details> and <summary> to create a collapsible section for the AI feedback.
     full_message = (
         f"<details><summary><strong>🤖 AI Review Feedback</strong></summary>\n\n"
         f"{ai_message}\n\n"
