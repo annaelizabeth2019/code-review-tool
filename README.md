@@ -44,7 +44,8 @@ This project is designed to run as a GitHub Action using Docker. It fetches the 
      OPENAI_API_KEY=your_openai_api_key_here
      GITHUB_EVENT_PATH=sample_event.json
      ```
-   - Or export them directly in your shell.
+    - Update the sample_event.json diff link to test the response for different PR diffs. 
+    - Or export them directly in your shell.
 
 4. **Run the tool locally:**
    ```bash
