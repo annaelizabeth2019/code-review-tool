@@ -1,9 +1,5 @@
 **WIP: this project still has more features coming soon!**
 
-**Upcoming features:**
-- Improved feedback formatting
-- Pass/Fail recommendation and configuration options
-
 # AI PR Reviewer
 
 Generates concise summaries and suggestions for GitHub Pull Requests using GPT-4.
@@ -14,6 +10,7 @@ Generates concise summaries and suggestions for GitHub Pull Requests using GPT-4
 - Praises good practices
 - Posts comment summarizing feedback to the PR
 - Automatically de-duplicates comments on subsequent commits to the PR
+- Pass/Fail recommendation for each PR that allows the workflow to fail if a major flaw is detected
 
 ## Usage as a GitHub Action
 This project is designed to run as a GitHub Action using Docker. It fetches the PR diff and sends it to OpenAI for review.
@@ -67,6 +64,7 @@ This project is designed to run as a GitHub Action using Docker. It fetches the 
 
 ## Contributing
 Pull requests and issues are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+Also please get in touch with feature requests!
 
 ## License
 MIT
