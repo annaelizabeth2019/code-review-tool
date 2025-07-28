@@ -1,6 +1,7 @@
 name: "Code Review AI Assistant"
 description: "Generates a concise summary & suggestions for a Pull Request using GPT‑4"
 icon: "award"
+color: "blue"
 runs:
   using: "docker"
   image: "Dockerfile"
