@@ -1,4 +1,4 @@
-name: "AI PR Reviewer"
+name: "Code Review AI Assistant"
 description: "Generates a concise summary & suggestions for a Pull Request using GPT‑4"
 runs:
   using: "docker"
